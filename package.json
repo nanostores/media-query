@@ -1,6 +1,6 @@
 {
   "name": "@nanostores/media-query",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A smart store for Nano Stores state manager to sync with some media query",
   "keywords": [
     "nano",
