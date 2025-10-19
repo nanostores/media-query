@@ -13,7 +13,7 @@ import type { ReadableAtom } from 'nanostores'
  * @param trueValue Store’s value when media query matches.
  * @param falseValue Store’s value when media query doesn’t matches.
  */
-export function fromMediaQuery<TrueValue, FalseValue>(
+export function fromMediaQuery<const TrueValue, const FalseValue>(
   query: string,
   trueValue: TrueValue,
   falseValue: FalseValue
