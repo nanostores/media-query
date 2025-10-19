@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "test:lint": "eslint .",
-    "test:coverage": "pnpm bnt --coverage 100",
+    "test:coverage": "pnpm bnt --coverage 100 --coverage-exclude 'test/*'",
     "test:types": "tsc --noEmit",
     "test:size": "size-limit",
     "test": "pnpm run /^test:/"
@@ -69,7 +69,7 @@
       "import": {
         "./index.js": "{ fromMediaQuery }"
       },
-      "limit": "0 B"
+      "limit": "96 B"
     }
   ],
   "clean-publish": {

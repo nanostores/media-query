@@ -5,7 +5,7 @@
 
 A smart store for [Nano Stores] state manager to sync with some media query.
 
-* **Small.** from 0 bytes (minified and brotlied).
+* **Small.** from 84 bytes (minified and brotlied).
   Zero dependencies. It uses [Size Limit] to control size.
 * It has good **TypeScript**.
 * Framework agnostic. It supports SSR.
@@ -13,7 +13,7 @@ A smart store for [Nano Stores] state manager to sync with some media query.
 ```ts
 import { fromMediaQuery } from '@nanostores/media-query'
 
-export const $mobile = fromMediaQuery('(max-width: 600px)')
+export const $isMobile = fromMediaQuery('(max-width: 600px)')
 ```
 
 [Nano Stores]: https://github.com/nanostores/nanostores
@@ -37,3 +37,9 @@ npm install nanostores @nanostores/media-query
 
 See [Nano Stores docs](https://github.com/nanostores/nanostores#guide)
 about using the store and subscribing to store’s changes in UI frameworks.
+
+You can degine store values:
+
+```ts
+export const $isMobile = fromMediaQuery('(max-width: 600px)', 'yes', 'no')
+```
