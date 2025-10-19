@@ -1,0 +1,16 @@
+{
+  "image": "localhost/ai-opensource:latest",
+  "mounts": [
+    {
+      "source": "pnpm-store",
+      "target": "/home/ai/.local/share/pnpm/store",
+      "type": "volume"
+    },
+    {
+      "source": "shell-history",
+      "target": "/home/ai/.local/share/history/",
+      "type": "volume"
+    }
+  ],
+  "runArgs": ["--cap-add=NET_RAW", "--ulimit=host", "-p", "5032:22"]
+}

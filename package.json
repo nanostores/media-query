@@ -1,0 +1,77 @@
+{
+  "name": "@nanostores/media-query",
+  "version": "0.0.0",
+  "description": "A smart store for Nano Stores state manager to sync with some media query",
+  "keywords": [
+    "nano",
+    "media",
+    "query",
+    "react",
+    "preact",
+    "vue",
+    "svelte",
+    "store"
+  ],
+  "scripts": {
+    "test:lint": "eslint .",
+    "test:coverage": "pnpm bnt --coverage 100",
+    "test:types": "tsc --noEmit",
+    "test:size": "size-limit",
+    "test": "pnpm run /^test:/"
+  },
+  "author": "Andrey Sitnik <andrey@sitnik.ru>",
+  "license": "MIT",
+  "repository": "nanostores/media-query",
+  "sideEffects": false,
+  "type": "module",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": "^20.0.0 || ^22.0.0 || >= 24.0.0"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/ai"
+    }
+  ],
+  "peerDependencies": {
+    "nanostores": "^0.9.0 || ^0.10.0 || ^0.11.0 || ^1.0.0"
+  },
+  "devDependencies": {
+    "@logux/eslint-config": "^56.1.0",
+    "@size-limit/preset-small-lib": "^11.2.0",
+    "@types/node": "^24.8.1",
+    "actions-up": "^1.4.2",
+    "better-node-test": "^0.8.3",
+    "clean-publish": "^5.2.2",
+    "eslint": "^9.38.0",
+    "globals": "^16.4.0",
+    "multiocular": "^0.8.1",
+    "nanodelay": "^2.0.2",
+    "nanostores": "^1.0.1",
+    "size-limit": "^11.2.0"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "jsxSingleQuote": false,
+    "quoteProps": "consistent",
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "size-limit": [
+    {
+      "import": {
+        "./index.js": "{ fromMediaQuery }"
+      },
+      "limit": "0 B"
+    }
+  ],
+  "clean-publish": {
+    "cleanDocs": true
+  }
+}
