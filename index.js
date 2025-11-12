@@ -6,17 +6,15 @@ export function fromMediaQuery(query, trueValue = true, falseValue = false) {
   }
 
   let media = window.matchMedia(query)
-  let getValue = () => media.matches ? trueValue : falseValue
-  let store = atom(getValue())
+  let store = atom(media.matches ? trueValue : falseValue)
 
   function listen() {
-    store.set(getValue())
+    store.set(media.matches ? trueValue : falseValue)
   }
+
   onMount(store, () => {
     media.addEventListener('change', listen)
-    return () => {
-      media.removeEventListener('change', listen)
-    }
+    return () => media.removeEventListener('change', listen)
   })
 
   return store
