@@ -9,6 +9,6 @@ test('works outside of browser', () => {
 })
 
 test('Server returns custom false value', () => {
-  let store = fromMediaQuery('(max-width: 600px)', '🍏', '🥔')
-  equal(store.get(), '🥔')
+  let store = fromMediaQuery('(max-width: 600px)', 'yes', 'no')
+  equal(store.get(), 'no')
 })
