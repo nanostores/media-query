@@ -1,11 +1,15 @@
 # Change Log
+
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.1.2
-* Fixed false value on running on server.
+
+- Fixed false value on running on server.
 
 ## 0.1.1
-* Fixed custom values types.
+
+- Fixed custom values types.
 
 ## 0.1.0
-* Initial release.
+
+- Initial release.

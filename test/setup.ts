@@ -15,17 +15,17 @@ function matchMedia(query: string): MediaQueryList {
       if (type !== 'change') {
         throw new TypeError('Only change event is supported')
       }
-      mediaListeners[query].add(listener)
+      mediaListeners[query]!.add(listener)
     },
     get matches() {
-      return mediaMatches[query]
+      return !!mediaMatches[query]
     },
     // @ts-expect-error
     removeEventListener(type: string, listener: Listener): void {
       if (type !== 'change') {
         throw new TypeError('Only change event is supported')
       }
-      mediaListeners[query].delete(listener)
+      mediaListeners[query]!.delete(listener)
     }
   }
 }
@@ -37,7 +37,7 @@ globalThis.window = {
 
 export function changeMedia(query: string, matches: boolean): void {
   mediaMatches[query] = matches
-  mediaListeners[query].forEach(listener => {
+  mediaListeners[query]!.forEach(listener => {
     listener({ matches } as MediaQueryListEvent)
   })
 }
