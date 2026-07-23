@@ -5,10 +5,10 @@
 
 A smart store for [Nano Stores] state manager to sync with some media query.
 
-* **Small.** from 84 bytes (minified and brotlied).
+- **Small.** from 84 bytes (minified and brotlied).
   Zero dependencies. It uses [Size Limit] to control size.
-* It has good **TypeScript**.
-* Framework agnostic. It supports SSR.
+- It has good **TypeScript**.
+- Framework agnostic. It supports SSR.
 
 ```ts
 import { fromMediaQuery } from '@nanostores/media-query'
@@ -17,21 +17,19 @@ export const $isMobile = fromMediaQuery('(max-width: 600px)')
 ```
 
 [Nano Stores]: https://github.com/nanostores/nanostores
-[Size Limit]: https://github.com/ai/size-limit
+[Size Limit]: https://github.com/ai/size-limit
 
 ---
 
-<img src="https://cdn.evilmartians.com/badges/logo-no-label.svg" alt="" width="22" height="16" />  Made at <b><a href="https://evilmartians.com/devtools?utm_source=nanostores-media-query&utm_campaign=devtools-button&utm_medium=github">Evil Martians</a></b>, product consulting for <b>developer tools</b>.
+<img src="https://cdn.evilmartians.com/badges/logo-no-label.svg" alt="" width="22" height="16" />  Nano Stores Media Query is built by <b><a href="https://evilmartians.com/">Evil Martians</a></b>, an American design and engineering consultancy for <b>developer tools, AI, and cybersecurity startups</b>.
 
 ---
-
 
 ## Install
 
 ```sh
 npm install nanostores @nanostores/media-query
 ```
-
 
 ## Usage
 
